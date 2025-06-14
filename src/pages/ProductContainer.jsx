@@ -1,9 +1,27 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect, useContext} from "react";
 import NavBar from "../components/NavBar"
 import {useOutletContext, Link, useParams, Outlet} from "react-router-dom"
+import ProductContext from "../components/ProductContext";
+import Search from "../components/Search";
 
 export default function ProductContainer() {
-    const [products, setProducts] = useState([]);
+  const {products, setProducts} = useContext(ProductContext);
+
+    //search
+  const [searchTerm, setSearchTerm] = useState('');
+
+  function handleSearchChange(e) {
+    setSearchTerm(e.target.value);
+    return setSearchTerm
+  };
+
+const filteredProducts = products.filter((product) => {
+    const productName = product.name.toLowerCase(); 
+    const lowerCaseSearchTerm = searchTerm.toLowerCase() 
+    return productName.includes(lowerCaseSearchTerm) 
+   });
+
+
 
     useEffect(() => {
         fetch("http://localhost:3000/products")
@@ -18,9 +36,13 @@ export default function ProductContainer() {
 	return (
 		  <>
             <NavBar />
+            <Search
+                searchTerm={searchTerm}
+                handleSearchChange={handleSearchChange} />
+                <button onClick={() => setSearchTerm('')}>New Style Search</button>
             <main>
                 <h1>Dancewear</h1>
-                <Outlet context={{products}}/>
+                <Outlet context={{products, filteredProducts}}/>
             </main>
         </>
 	)

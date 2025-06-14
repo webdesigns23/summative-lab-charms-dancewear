@@ -3,13 +3,14 @@ import { useOutletContext, Link } from "react-router-dom";
 import ProductCard from "./ProductCard";
 
 export default function ProductList() {
-	const { products } = useOutletContext();
+	const {filteredProducts} = useOutletContext();
+
 
 	return (
 		<ul className="cards">
-			{products.map((product) => (
+			{filteredProducts.map((product) => (
 				<ProductCard key={product.id} product={product} />
-			))};
+			))}
 		</ul>
 	)
 }
