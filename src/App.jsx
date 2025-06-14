@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import ProductContext from "./components/ProductContext"
+import ProductContext from "./context/ProductContext"
 import Home from "./pages/Home"
 import About from "./pages/About"
 import Admin from "./pages/Admin"
@@ -31,5 +31,7 @@ export default function App() {
     </BrowserRouter>
   )
 };
+
+
 
 
