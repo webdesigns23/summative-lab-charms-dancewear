@@ -3,27 +3,30 @@
     "products": [
       {
         "id": "1",
-        "name": "Siena",
+        "name": "Siena Leotard",
 		"image": "./images/Siena.png",
         "description": "Siena Description",
-		"Category": "Leotard",
-		"Price": 75
+		"category": "Leotard",
+		"price": 75.00,
+        "likes": 5
       },
 	   {
         "id": "2",
-        "name": "Juliet",
+        "name": "Juliet Leotard",
 		"image": "./images/Juliet.png",
         "description": "Juliet Description",
-		"Category": "Leotard",
-		"Price": 70
+		"category": "Leotard",
+		"price": 70.00,
+        "likes": 8
       },
 	   {
         "id": "3",
         "name": "Odette Leotard",
 		"image": "./images/Odette.png",
         "description": "Odette Description",
-		"Category": "Leotard",
-		"Price": 90
+		"category": "Leotard",
+		"price": 90.00,
+        "likes": 12
       },
 	   {
         "id": "4",
@@ -31,7 +34,8 @@
 		"image": "./images/Giselle.png",
         "description": "Giselle Description",
 		"Category": "Leotard",
-		"Price": 60
+		"price": 60.00,
+        "likes": 7
       },
 	   {
         "id": "5",
@@ -39,7 +43,8 @@
 		"image": "./images/Apollo.JPG",
         "description": "Apollo Description",
 		"Category": "Skirt",
-		"Price": 42
+		"price": 42.00,
+        "likes": 15
       }
     
     ]
