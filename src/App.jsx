@@ -8,6 +8,7 @@ import ProductCard from "./pages/ProductCard"
 import ProductContainer from "./pages/ProductContainer"
 import ProductForm from "./pages/ProductForm"
 import ProductList from "./pages/ProductList"
+import UpdatePrice from "./pages/UpdatePrice"
 
 
 export default function App() {
@@ -21,6 +22,7 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/admin" element={<Admin />} >
             <Route path="new" element={<ProductForm />} />
+            <Route path="/admin/update" element={<UpdatePrice />} />
           </Route>
           <Route path="/products" element={<ProductContainer />}>
             <Route path="" element={<ProductList />} />

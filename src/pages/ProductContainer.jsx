@@ -21,17 +21,22 @@ export default function ProductContainer() {
     return productName.includes(lowerCaseSearchTerm)
   });
 
-
-
-  useEffect(() => {
-    fetch("http://localhost:3000/products")
-      .then(r => {
-        if (!r.ok) { throw new Error("failed to get products") }
-        return r.json()
-      })
-      .then(setProducts)
-      .catch(console.log)
-  }, [])
+ useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await fetch("http://localhost:3000/products");
+        if (response.ok) {
+          const products = await response.json();
+          setProducts(products);
+        } else {
+          console.log("failed to get products");
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchProducts();
+  }, []);
 
   return (
     <>
@@ -42,7 +47,7 @@ export default function ProductContainer() {
       <button onClick={() => setSearchTerm('')}>New Style Search</button>
       <main>
         <h1>Dancewear</h1>
-        <Outlet context={{ products, filteredProducts }} />
+        <Outlet context={{ products, setProducts, filteredProducts }} />
       </main>
     </>
   )
