@@ -10,22 +10,13 @@
       "likes": 5
     },
     {
-      "id": "2",
-      "name": "Juliet Leotard",
-      "image": "./images/Juliet.png",
-      "description": "Juliet Description",
-      "category": "Leotard",
-      "price": 70,
-      "likes": 8
-    },
-    {
       "id": "3",
       "name": "Odette Leotard",
       "image": "./images/Odette.png",
       "description": "Odette Description",
       "category": "Leotard",
       "price": 90,
-      "likes": 12
+      "likes": 13
     },
     {
       "id": "4",
@@ -62,7 +53,7 @@
       "description": "Diana Description",
       "category": "Leotard",
       "price": "60.00",
-      "likes": 0
+      "likes": 1
     },
     {
       "id": "9d0f",
@@ -71,7 +62,7 @@
       "description": "Diana Description",
       "category": "Leotard",
       "price": "60.00",
-      "likes": 0
+      "likes": 2
     },
     {
       "id": "e6e6",
@@ -80,16 +71,7 @@
       "description": "Diana Description",
       "category": "Leotard",
       "price": "60.00",
-      "likes": 0
-    },
-    {
-      "id": "bb17",
-      "name": "Diana Leotard",
-      "image": "./images/Diana.png",
-      "description": "Diana Description",
-      "category": "Leotard",
-      "price": "60.00",
-      "likes": 0
+      "likes": 2
     },
     {
       "id": "d019",
@@ -101,22 +83,13 @@
       "likes": 0
     },
     {
-      "id": "c723",
-      "name": "Diana Leotard",
-      "image": "./images/Diana.png",
-      "description": "Diana Description",
-      "category": "Leotard",
-      "price": "60.00",
-      "likes": 0
-    },
-    {
-      "id": "c890",
-      "name": "Diana Leotard",
-      "image": "./images/Diana.png",
-      "description": "Diana Description",
-      "category": "Leotard",
-      "price": "60.00",
-      "likes": 0
+      "id": "7727",
+      "name": "Jessie Skirt",
+      "image": "https://www.pngmart.com/files/12/Jessie-Toy-Story-PNG-Transparent-Image.png",
+      "description": "Jessie Description",
+      "category": "Skirt",
+      "price": "50.00",
+      "likes": 2
     }
   ]
 }
