@@ -1,12 +1,29 @@
-# React + Vite
+#Charms Dancewear Single Page Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+##Description
+An ecommerce website to purchase custom handmade dancewear.
 
-Currently, two official plugins are available:
+##Features
+•	Navigate to the Shop Page to view current products
+•	Click the Favorite Button to Favorite products
+•	Use the buy now button to delete products, future updates will allow you to at your cart and checkout
+•	Search for your favorite style with the search bar
+•	Navigate to the Admin Page to alter products
+•	Click the link to Add new products
+•	Click the link to Update a product price
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+##App Languages:
+•	React
+•	React Router
+•	React Tests
+•	JSON Server
+•	HTML/CSS
+•	GitHub for Version Control
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+##To use Single Page Application
+1.	Follow the link to the GitHub Repository
+2.	Fork and Clone the repository to your device
+3.	Open with an IDE, Visual Studio Code preferred 
+4.	Download necessary dependencies, nmp install and react-router dom
+5.	Open JSON server with nmp run server
+6.	Open local host with npm run dev

@@ -4,6 +4,7 @@ import { useOutletContext, Link, useParams, Outlet } from "react-router-dom"
 import ProductContext from "../context/ProductContext";
 import Search from "../components/Search";
 
+
 export default function ProductContainer() {
   const { products, setProducts } = useContext(ProductContext);
 

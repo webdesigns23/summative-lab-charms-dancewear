@@ -3,23 +3,26 @@ import { useOutletContext, Link } from "react-router-dom";
 import ProductCard from "./ProductCard";
 
 export default function ProductList() {
-	const {filteredProducts} = useOutletContext();
-	
-  //Delete (Buy Now)
-  const handleDeleteProduct = deletedProductId => setProducts(previousProducts => previousProducts.filter(product => product.id !== deletedProductId))
+	const { filteredProducts } = useOutletContext();
+	const { setProducts } = useOutletContext();
 
-  //Update Favorited
-  function handleUpdateProduct(updatedProduct) {
-    const updatedProducts = products.map((product) =>
-      product.id === updatedProduct.id ? updatedProduct : product
-    );
-    setProducts(updatedProducts);
-  }
+	//Delete (Buy Now)
+	function handleDeleteProduct(id) {
+		setProducts((prevProducts) => prevProducts.filter((e) => e.id !== id))
+	}
+
+	//Update Favorited
+	function handleUpdateProduct(updatedProduct) {
+		const updatedList = products.map((product) =>
+			drink.id === updatedProduct.id ? updatedProduct : product);
+		setProducts(updatedList);
+	}
+
 
 	return (
 		<ul className="cards">
 			{filteredProducts.map((product) => (
-				<ProductCard key={product.id} 
+				<ProductCard key={product.id}
 					product={product}
 					onDeleteProduct={handleDeleteProduct}
 					onUpdateProduct={handleUpdateProduct} />
