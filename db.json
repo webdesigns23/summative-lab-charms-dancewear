@@ -3,7 +3,7 @@
     {
       "id": "1",
       "name": "Siena Leotard",
-      "image": "./images/Siena.png",
+      "image": "./images/Siena.JPG",
       "description": "Siena Description",
       "category": "Leotard",
       "price": 75,
@@ -12,7 +12,7 @@
     {
       "id": "2",
       "name": "Juliet Leotard",
-      "image": "./images/Juliet.png",
+      "image": "./images/Juliet.JPG",
       "description": "Juliet Description",
       "category": "Leotard",
       "price": 70,
@@ -21,7 +21,7 @@
     {
       "id": "3",
       "name": "Odette Leotard",
-      "image": "./images/Odette.png",
+      "image": "./images/Odette.JPG",
       "description": "Odette Description",
       "category": "Leotard",
       "price": 90,
@@ -30,7 +30,7 @@
     {
       "id": "4",
       "name": "Giselle Leotard",
-      "image": "./images/Giselle.png",
+      "image": "./images/Giselle.JPG",
       "description": "Giselle Description",
       "Category": "Leotard",
       "price": 60,
@@ -46,22 +46,22 @@
       "likes": 16
     },
     {
-      "id": "4a5e",
-      "name": "Jessie Skirt",
-      "image": "https://www.pngmart.com/files/12/Jessie-Toy-Story-PNG-Transparent-Image.png",
-      "description": "Jessie Description",
+      "id": "6",
+      "name": "Gamzatti Skirt",
+      "image": "./images/Gamzatti.jpg",
+      "description": "Gamzatti Description",
       "category": "Skirt",
-      "price": "50.00",
+      "price": "55.00",
       "likes": 0
     },
     {
-      "id": "325e",
-      "name": "Jessie Skirt",
-      "image": "https://www.pngmart.com/files/12/Jessie-Toy-Story-PNG-Transparent-Image.png",
-      "description": "Jessie Description",
-      "category": "Skirt",
-      "price": "50.00",
-      "likes": 1
+      "id": "7",
+      "name": "Clara Leotard",
+      "image": "./images/Clara.JPG",
+      "description": "Clara Description",
+      "category": "Leotard",
+      "price": "70.00",
+      "likes": 2
     },
     {
       "id": "91e9",
@@ -74,6 +74,15 @@
     },
     {
       "id": "5b14",
+      "name": "Jessie Skirt",
+      "image": "https://www.pngmart.com/files/12/Jessie-Toy-Story-PNG-Transparent-Image.png",
+      "description": "Jessie Description",
+      "category": "Skirt",
+      "price": "50.00",
+      "likes": 0
+    },
+    {
+      "id": "6470",
       "name": "Jessie Skirt",
       "image": "https://www.pngmart.com/files/12/Jessie-Toy-Story-PNG-Transparent-Image.png",
       "description": "Jessie Description",
