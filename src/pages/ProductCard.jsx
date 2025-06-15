@@ -3,32 +3,32 @@ import React from "react";
 import { useOutletContext, useParams } from "react-router-dom";
 
 export default function ProductCard({ product, onDeleteProduct, onUpdateProduct }) {
-	const{id, likes} = product;
-	
+	const { id, likes } = product;
 
+	//Delete-Buy Now:
 	function handleDeleteClick() {
-    fetch(`http://localhost:3000/products/${product.id}`, {
-      method: "DELETE"
-    })
-      .then(r => {
-        if (!r.ok) { throw new Error("failed to delete toy") }
-        onDeleteProduct(id)
-      })
-      .catch(error => console.log(error.message))
-  }
+		fetch(`http://localhost:3000/products/${product.id}`, {
+			method: "DELETE"
+		})
+			.then(r => {
+				if (!r.ok) { throw new Error("failed to delete toy") }
+				onDeleteProduct(id)
+			})
+			.catch(error => console.log(error.message))
+	}
 
-   function handleLikeClick() {
-    fetch(`http://localhost:3000/products/${product.id}`, {
-      method: "PATCH",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ likes: likes + 1 }),
-    })
-      .then((res) => res.json())
-      .then((updatedProduct) => onUpdateProduct(updatedProduct));
-  }
-
+	//Update Favorited:
+	function handleLikeClick() {
+		fetch(`http://localhost:3000/products/${product.id}`, {
+			method: "PATCH",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify({ likes: likes + 1 }),
+		})
+			.then((res) => res.json())
+			.then((updatedProduct) => onUpdateProduct(updatedProduct));
+	}
 
 	return (
 		<li className="card" data-testid="product-item">

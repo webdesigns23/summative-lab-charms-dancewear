@@ -1,11 +1,28 @@
-import { useState } from "react"
+import { useEffect, useState, useRef } from "react"
 import { useNavigate, useOutletContext } from "react-router-dom"
 
 
-export default function ProductForm() {
-	const { setProducts } = useOutletContext
+export default function ProductForm({onAddProduct}) {
+	const { products } = useOutletContext;
+	const { setProducts } = useOutletContext;
+
+	//Focus name when form opens
+	const inputRefName = useRef(null);
+
+	useEffect(() => {
+		inputRefName.current?.focus()
+	}, []);	
+
 	const navigate = useNavigate();	
-	const [productData, setProductData] = useState({
+	
+	const handleChange = event => {
+		setProductData(previousData => ({
+			...previousData,
+			[event.target.name]: event.target.value
+		}))
+	};
+
+		const [productData, setProductData] = useState({
 		name: "",
 		image: "",
 		description: "",
@@ -13,12 +30,11 @@ export default function ProductForm() {
 		price: ""
 	})
 
-	function handleAddProduct(newProduct) {
-		setProducts(previousProduct => [...previousProduct, newProduct])
-	}
+
 
 	const handleSubmit = event => {
 		event.preventDefault()
+		
 		const newProduct = {
 			...productData,
 			likes: 0
@@ -29,13 +45,13 @@ export default function ProductForm() {
 				"Content-Type": "application/json"
 			},
 			body: JSON.stringify(newProduct)
-		})
+			})
 			.then(r => {
 				if (!r.ok) { throw new Error("failed to add product") }
 				return r.json()
 			})
 			.then(newProduct => {
-				handleAddProduct(newProduct)
+				setProducts(previousProducts => [...previousProducts, newProduct])
 				setProductData({
 					name: "",
 					image: "",
@@ -43,23 +59,21 @@ export default function ProductForm() {
 					category: "",
 					price: ""
 				})
-				navigate("/admin")
+				setProducts(setProductData);
+				console.log('Form Submitted:', productData);
+				navigate("/admin");
 			})
 			.catch(console.error)
 	}
 
-	const handleChange = event => {
-		setProductData(previousData => ({
-			...previousData,
-			[event.target.name]: event.target.value
-		}))
-	};
+	
 
 	return (
 		<div className="container">
 			<h2>Add New Product</h2>
 			<form className="add-product-form" onSubmit={handleSubmit}>
 				<input
+					ref={inputRefName}
 					type="text"
 					name="name"
 					placeholder="Enter Style Name..."
