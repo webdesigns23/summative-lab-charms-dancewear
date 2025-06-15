@@ -1,0 +1,29 @@
+import { useState } from 'react';
+
+export default function usePatchRequest(initialUrl) {
+  const [data, setData] = useState(null);
+  const [error, setError] = useState(null);
+
+  const patchData = async (url, body) => {
+    setError(null);
+
+    try {
+      const response = await fetch(url || initialUrl, {
+        method: 'PATCH',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(body),
+      });
+      if (!response.ok) {
+        throw new Error("Failed to patch data");
+      }
+      const responseData = await response.json();
+      setData(responseData);
+    } catch (error) {
+      setError(error.message);
+    } 
+  };
+
+  return { data, error, patchData };
+};
