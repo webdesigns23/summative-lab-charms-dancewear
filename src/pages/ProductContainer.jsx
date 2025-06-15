@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import NavBar from "../components/NavBar"
-import { useOutletContext, Link, useParams, Outlet } from "react-router-dom"
+import {Outlet } from "react-router-dom"
 import ProductContext from "../context/ProductContext";
 import Search from "../components/Search";
 

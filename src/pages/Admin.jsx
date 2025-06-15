@@ -8,6 +8,7 @@ import ProductContext from "../context/ProductContext";
 export default function Admin() {
 	const { products, setProducts } = useContext(ProductContext);
 
+	//update price
 	const updatePrice = (updatedProductPrice) => {
 		setProducts(previousProduct => previousProduct.map(product => {
 			if (product.id === updatedDirector.id) {
